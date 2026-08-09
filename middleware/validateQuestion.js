@@ -1,33 +1,34 @@
 function validateQuestionBody(body) {
-    const { question, options, correctAnswer, level } = body
+  const { question, options, correctAnswer, level } = body
 
-    if (!question || typeof question !== "string" || !question.trim()) {
-        return "Question text is required!"
-    }
+  const correct = Number(correctAnswer)
+  const difficulty = Number(level)
 
-    if (!Array.isArray(options) || options.length !== 4 || options.some((o) => !o || !String(o).trim())) {
-        return "Please provide four valid answer options"
-    }
+  if (!question || typeof question !== "string") {
+    return "Question text is required."
+  }
 
-    if (
-        correctAnswer === undefined ||
-        correctAnswer === null ||
-        Number(correctAnswer) < 0 ||
-        Number(correctAnswer) > 3
-    ) {
-        return "A valid correct answer must be provided"
-    }
+  if (!Array.isArray(options) || options.length !== 4) {
+    return "Exactly four answer options are required."
+  }
 
-    if (!level || Number.isNaN(Number(level)) || Number(level) < 1 || Number(level) > 15) {
-        return "A difficulty level between 1 and 15 is required"
-    }
+  if (options.some(option => !option || !String(option).trim())) {
+    return "Answer options cannot be empty."
+  }
 
-    return null
+  if (Number.isNaN(correct) || correct < 0 || correct > 3) {
+    return "Correct answer must be between 0 and 3."
+  }
+
+  if (Number.isNaN(difficulty) || difficulty < 1 || difficulty > 15) {
+    return "Difficulty level must be between 1 and 15."
+  }
+
+  return null;
 }
-
 function validateQuestions (req,res,next) {
     const {questions} = req.body
-    if (!Array.isArray(questions) || questions.length === 0) {
+    if (!Array.isArray(questions) || questions.length === 3) {
         return res.status(400).json({message: "At least three question is required"})
     }
     for (let i = 0; i < questions.length; i++) {
