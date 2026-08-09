@@ -28,3 +28,17 @@ if (!level || Number.isNaN(Number(level)) || Number(level) <1 || Number(level) >
 return null
 
 }
+
+async function createQuestion(res,req){
+    try{
+        const createdQuestion = await Question.create({
+            question: req.body.question,
+            options: req.body.options,
+            correctAnswer: req.body.correctAnswer,
+            level: req.body.level
+        })
+        res.status(201).json(createdQuestion)
+    } catch(err){
+        res.status(500).json({message: "Internal Server Error"})
+    }
+}
