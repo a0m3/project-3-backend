@@ -36,16 +36,22 @@ async function getGameById(req,res)  {
 
 async function createCustomGame(req,res){
     try{
-        const(name,questions = []) = req.body
+        const{name,questions = []} = req.body
         if (!name || !name.trim()) {
             return res.status(400).json({ message: 'Custom game name is required'})
         }
         
-        const newGame = awaot CustomGame.create({
+        const newGame = await CustomGame.create({
             name: req.body.name,
             questions: req.body.questions,
             creator: req,user,_id
         })
         res.status(201).json(newGame)
+    } catch(err){
+        res.status(500).json({message: 'Internal server error'})
     }
+}
+
+async function updateCustomGame(req,res){
+
 }
