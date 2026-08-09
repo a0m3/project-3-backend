@@ -1,32 +1,7 @@
 const Question = require("../models/Question")
 const { moneyLadder } = require("../models/ladder")
 
-function validateQuestionBody(body) {
-    const { question, options, correctAnswer, level } = body
 
-    if (!question || typeof question !== "string" || !question.trim()) {
-        return "Question text is required!"
-    }
-
-    if (!Array.isArray(options) || options.length !== 4 || options.some((o) => !o || !String(o).trim())) {
-        return "Please provide four valid answer options"
-    }
-
-    if (
-        correctAnswer === undefined ||
-        correctAnswer === null ||
-        Number(correctAnswer) < 0 ||
-        Number(correctAnswer) > 3
-    ) {
-        return "A valid correct answer must be provided"
-    }
-
-    if (!level || Number.isNaN(Number(level)) || Number(level) < 1 || Number(level) > 15) {
-        return "A difficulty level between 1 and 15 is required"
-    }
-
-    return null
-}
 
 
 async function getAllQuestions(req, res) {
@@ -48,7 +23,7 @@ async function getQuestionById(req, res) {
     }
     catch (err) {
         console.log(err)
-        res.status(500).json({ message: "Internal server error, try again later." })
+        res.status(500).json({ message: "Internal server error, please try again later." })
     }
 }
 
@@ -59,14 +34,14 @@ async function createQuestion(req, res) {
             return res.status(400).json({ message: error })
 
             const { question, options, correctAnswer, level }
-            const created = await Question.create({
+            const createdQuestion = await Question.create({
                 question: question,
                 options: options.map((o) => o),
                 correctAnswer: Number(correctAnswer),
                 level: Number(level),
                 createdBy: req.user._id
             })
-            res.status(201).json(created)
+            res.status(201).json(createdQuestion)
         }
     }
     catch (err) {
@@ -74,7 +49,7 @@ async function createQuestion(req, res) {
         if (err.name === "ValidationError") {
             return res.status(400).json({ message: err.message });
         }
-        res.status(500).json({ message: "Internal server error, try again later." });
+        res.status(500).json({ message: "Internal server error, please try again later." });
     }
 }
 
@@ -104,7 +79,22 @@ async function updateQuestion(req, res) {
         if (err.name === "ValidationError") {
             return res.status(400).json({ message: err.message });
         }
+        res.status(500).json({ message: "Internal server error, please try again later." });
+    }
+}
+
+async function deleteQuestion(req, res) {
+    try {
+        const deletedQuestion = await Question.findByIdAndDelete(req.params.id)
+        if (!deletedQuestion) {
+            return res.status(404).json({ message: "Question Not Found" })
+        }
+        res.status(200).json("Question Deleted")
+    }
+    catch (err) {
+        console.log(err);
         res.status(500).json({ message: "Internal server error, try again later." });
     }
 }
+
 
