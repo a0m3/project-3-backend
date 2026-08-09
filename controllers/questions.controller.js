@@ -124,3 +124,12 @@ async function getGameQuestions(req, res) {
     }
 }
 
+
+module.exports = {
+    getAllQuestions,
+    getQuestionById,
+    createQuestion,
+    updateQuestion,
+    deleteQuestion,
+    getGameQuestions
+}
