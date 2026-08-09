@@ -96,22 +96,4 @@ async function deleteQuestion(req, res) {
         res.status(500).json({ message: "Internal server error, try again later." });
     }
 }
-
-<<<<<<< HEAD
-}
-
-async function createQuestion(res,req){
-    try{
-        const createdQuestion = await Question.create({
-            question: req.body.question,
-            options: req.body.options,
-            correctAnswer: req.body.correctAnswer,
-            level: req.body.level
-        })
-        res.status(201).json(createdQuestion)
-    } catch(err){
-        res.status(500).json({message: "Internal Server Error"})
-    }
-}
-=======
->>>>>>> 2f76c39545c19bf100d36fe6dad9838cee9f6e48
+    
