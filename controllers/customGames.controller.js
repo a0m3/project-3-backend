@@ -8,7 +8,7 @@ async function getMyCustomGames(req,res) {
     try{
         const foundGame = await CustomGame.find({creator: req.user._id})
 
-        const gameQuestions = foundGame.map((game) => ({
+        const gameRoom = foundGame.map((game) => ({
             _id: game._id,
             name: game.name,
             questionCount: game.questions.length,
