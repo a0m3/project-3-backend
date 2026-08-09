@@ -46,9 +46,6 @@ async function createQuestion(req, res) {
     }
     catch (err) {
         console.log(err);
-        if (err.name === "ValidationError") {
-            return res.status(400).json({ message: err.message });
-        }
         res.status(500).json({ message: "Internal server error, please try again later." });
     }
 }
@@ -76,9 +73,6 @@ async function updateQuestion(req, res) {
     }
     catch (err) {
         console.log(err);
-        if (err.name === "ValidationError") {
-            return res.status(400).json({ message: err.message });
-        }
         res.status(500).json({ message: "Internal server error, please try again later." });
     }
 }
@@ -94,6 +88,39 @@ async function deleteQuestion(req, res) {
     catch (err) {
         console.log(err);
         res.status(500).json({ message: "Internal server error, try again later." });
+    }
+}
+
+
+async function getGameQuestions(req, res) {
+    try {
+        const questions = []
+
+        for (let level = 1; level <= moneyLadder.length; level++) {
+            const question = await Question.aggregate([
+                { $match: { level: level } },
+                { $sample: { size: 1 } }
+            ])
+
+            if (question.length > 0) {
+                questions.push(question[0])
+            }
+        }
+
+        if (questions.length === 0) {
+            return res.status(404).json({
+                message: "No questions available."
+            })
+        }
+
+        res.status(200).json({
+            questions: questions,
+            ladder: moneyLadder.slice(0, questions.length)
+        });
+
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ message: "Internal server error. please try again later" })
     }
 }
 
