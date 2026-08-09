@@ -72,3 +72,39 @@ async function updateCustomGame(req,res){
     }
 }
 
+async function deleteGame(req,res){
+    try{
+        const foundGame = await CustomGame.findById(req.params.id)
+        if (!foundGame) return res.status(404).json({message:"custom game not found"})
+        if (!foundGame.creator.equals(req.user._id)){
+            return res.status(403).json({message:"you cannot delete other users games"})
+        }
+        const deletedGame = await CustomGame.findByIdAndDelete(req.params.id)
+        res.json(deletedGame)
+    } catch(err){
+        res.status(500).json({message: 'Internal server error'})
+
+    }
+
+}
+
+async function playGame( req,res){
+    try{
+        const gameRoom = await CustomGame.findById(req.params.id)
+        if(!gameRoom) return res.status(404).json({message:"Cannot find the game you are looking for"})
+        if(gameRoom.questions.length < minimumQuestions){
+            return res.status(400).json ({message:`This game needs at least 3 questions before it can start`})
+        }
+        const roundCount = gameRoom.questions.length < moneyLadder.length
+        ? gameRoom.questions.length : moneyLadder.length
+
+        res.status(200).json({
+            _id:gameRoom._id,
+            name:gameRoom.name,
+            questions:gameRoom.questions.slice(0, roundCount),
+            ladder: moneyLadder.slice(0, roundCount)
+        })
+    } catch(err){
+        res.status(500).json({ message:"Internal server error"})
+    }
+}
