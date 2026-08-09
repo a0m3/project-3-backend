@@ -29,20 +29,16 @@ async function getQuestionById(req, res) {
 
 async function createQuestion(req, res) {
     try {
-        const error = validateQuestionBody(req.body)
-        if (error) {
-            return res.status(400).json({ message: error })
-
-            const { question, options, correctAnswer, level }
+            const { question, options, correctAnswer, level } = req.body
             const createdQuestion = await Question.create({
                 question: question,
-                options: options.map((o) => o),
+                options: options,
                 correctAnswer: Number(correctAnswer),
                 level: Number(level),
                 createdBy: req.user._id
             })
             res.status(201).json(createdQuestion)
-        }
+        
     }
     catch (err) {
         console.log(err);
@@ -52,10 +48,7 @@ async function createQuestion(req, res) {
 
 async function updateQuestion(req, res) {
     try {
-        const error = validateQuestionBody(req.body)
-        if (error) {
-            return res.status(400).json({ message: error })
-        }
+
 
         const { question, options, correctAnswer, level } = req.body
         const updated = await Question.findByIdAndUpdate(

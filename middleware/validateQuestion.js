@@ -28,7 +28,7 @@ function validateQuestionBody(body) {
 }
 function validateQuestions (req,res,next) {
     const {questions} = req.body
-    if (!Array.isArray(questions) || questions.length === 3) {
+    if (!Array.isArray(questions) || questions.length < 3) {
         return res.status(400).json({message: "At least three question is required"})
     }
     for (let i = 0; i < questions.length; i++) {
@@ -40,4 +40,4 @@ function validateQuestions (req,res,next) {
     next()
 }
 
-module.exports = {validateQuestions}
+module.exports = validateQuestions
