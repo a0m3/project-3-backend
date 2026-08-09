@@ -16,7 +16,7 @@ const customQuestionSchema = new mongoose.Schema({
         }
     },
     correctAnswer: {
-        type:String,
+        type:Number,
         required: true,
         min: 0,
         max: 3
@@ -33,7 +33,7 @@ const customGameSchema = new mongoose.Schema({
     creator:{
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
-        requried: true
+        required: true
     },
     questions: {
         type: [customQuestionSchema],
