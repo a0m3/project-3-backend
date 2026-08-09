@@ -28,7 +28,7 @@ function validateQuestionBody(body) {
 function validateQuestions (req,res,next) {
     const {questions} = req.body
     if (!Array.isArray(questions) || questions.length === 0) {
-        return res.status(400).json({message: "At least one question is required"})
+        return res.status(400).json({message: "At least three question is required"})
     }
     for (let i = 0; i < questions.length; i++) {
         const error = validateQuestionBody(questions[i])
