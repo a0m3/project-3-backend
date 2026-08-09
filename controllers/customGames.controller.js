@@ -23,7 +23,7 @@ async function getMyCustomGames(req,res) {
 async function getGameById(req,res)  {
     try{
         const foundGame = await CustomGame.findById(req.params.id).populate("creator", "username")
-        if (!foundGame) return res.status(404).json({message:"Custome game not found"})
+        if (!foundGame) return res.status(404).json({message:"Custom game not found"})
         if (!foundGame.creator._id.equals(req.user._id)){
             return res.status(403).json({message: "You do not have access to this custom game"}
             )
@@ -42,8 +42,8 @@ async function createCustomGame(req,res){
         }
         
         const newGame = await CustomGame.create({
-            name: req.body.name,
-            questions: req.body.questions,
+            name,
+            questions,
             creator: req.user._id
         })
         res.status(201).json(newGame)
@@ -92,6 +92,9 @@ async function playGame( req,res){
     try{
         const gameRoom = await CustomGame.findById(req.params.id)
         if(!gameRoom) return res.status(404).json({message:"Cannot find the game you are looking for"})
+        if(!gameRoom.creator.equals(req.user._id)) {
+            return res.status(403).json({message: "You do not have access to this room"})
+        }
         if(gameRoom.questions.length < minimumQuestions){
             return res.status(400).json ({message:`This game needs at least 3 questions before it can start`})
         }
@@ -107,4 +110,14 @@ async function playGame( req,res){
     } catch(err){
         res.status(500).json({ message:"Internal server error"})
     }
+}
+
+module.exports ={
+    getMyCustomGames,
+    getGameById,
+    createCustomGame,
+    newGame,
+    updateCustomGame,
+    deleteGame,
+    playGame
 }
