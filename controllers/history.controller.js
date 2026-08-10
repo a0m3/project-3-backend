@@ -1,5 +1,5 @@
 const GameHistory = require('../models/GamesHistory')
-const moneyLadder = require('../models/ladder')
+const {moneyLadder} = require('../models/ladder')
 
 async function createHistory(req,res){
     try{
@@ -52,8 +52,8 @@ async function createHistory(req,res){
 
 async function getMyHistory (req,res){
     try{
-        const myHistory = (await GameHistory.find({player: req.user._id})).toSorted({playedAt: - 1})
-        res.status(200).json(history)
+        const myHistory = (await GameHistory.find({player: req.user._id})).sort({playedAt: - 1})
+        res.status(200).json(myHistory)
     } catch(err) {
         res.status(500).json ({ message:"Internal server error"})
     }
