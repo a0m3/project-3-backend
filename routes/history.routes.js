@@ -4,4 +4,7 @@ const historyController = require("")
 
 router.use(verifyToken)
 
+router.post("/", historyController.createHistory)
+router.get("/", historyController.getMyHistory)
+
 module.exports = router
