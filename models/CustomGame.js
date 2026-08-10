@@ -12,7 +12,7 @@ const customQuestionSchema = new mongoose.Schema({
         required: true,
         validate: {
             validator: (arr) => Array.isArray(arr) && arr.length === 4 && arr.every((o) => typeof o === "string" && o.trim().length > 0),
-            message: "Exactly four non-empty answer options are required.",
+            message: "Please provide four options.",
         }
     },
     correctAnswer: {
