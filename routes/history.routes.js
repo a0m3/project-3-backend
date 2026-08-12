@@ -1,6 +1,6 @@
 const router = require("express").Router()
 const verifyToken = require("../middleware/verifyToken")
-const historyController = require("")
+const historyController = require("../controllers/history.controller")
 
 router.use(verifyToken)
 

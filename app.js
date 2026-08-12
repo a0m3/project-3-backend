@@ -25,7 +25,7 @@ app.use(morgan('dev'))
 // Routes
 app.use('/auth',authRoutes)
 app.use('/questions', questionsRoute)
-app.use('/custom-games', customGamesRoutes)
+app.use('/custom-games', customGameRoutes)
 app.use('/history',historyRoutes)
 
 
