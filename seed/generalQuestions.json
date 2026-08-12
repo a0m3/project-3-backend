@@ -1,0 +1,663 @@
+[
+  {
+    "level": 1,
+    "question": "What color is the sky on a clear day?",
+    "options": [
+      "Blue",
+      "Green",
+      "Red",
+      "Yellow"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 1,
+    "question": "How many legs does a cat usually have?",
+    "options": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "correctAnswer": 1
+  },
+  
+  {
+    "level": 1,
+    "question": "Who is the best Software Engineering tutor at GA?",
+    "options": [
+      "Denis Sanchez Dujota",
+      "Omar Kamal",
+      "Nabila Ayaba",
+      "Omar Kamel"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "level": 1,
+    "question": "What is the capital city of Bahrain?",
+    "options": [
+      "Manama",
+      "Riffa",
+      "Muharraq",
+      "Hamad Town"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 2,
+    "question": "How many days are in a week?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "level": 2,
+    "question": "Which HTML tag is commonly used for a paragraph?",
+    "options": [
+      "<p>",
+      "<h1>",
+      "<img>",
+      "<div>"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 2,
+    "question": "What is the currency of Bahrain?",
+    "options": [
+      "Riyal",
+      "Dinar",
+      "Dirham",
+      "Pound"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "level": 2,
+    "question": "Which color is made by mixing red and blue?",
+    "options": [
+      "Green",
+      "Orange",
+      "Purple",
+      "Yellow"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "level": 3,
+    "question": "What do bees make?",
+    "options": [
+      "Milk",
+      "Honey",
+      "Bread",
+      "Butter"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "level": 3,
+    "question": "Which CSS property changes text color?",
+    "options": [
+      "font-size",
+      "background",
+      "color",
+      "display"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "level": 3,
+    "question": "Which language is mainly used to add behavior to web pages?",
+    "options": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "SQL"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "level": 3,
+    "question": "Which city is Bahrain's capital?",
+    "options": [
+      "Manama",
+      "Isa Town",
+      "Sitra",
+      "Budaiya"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 4,
+    "question": "Which planet is known as the Red Planet?",
+    "options": [
+      "Venus",
+      "Jupiter",
+      "Mars",
+      "Saturn"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "level": 4,
+    "question": "Which HTML tag is used to create a link?",
+    "options": [
+      "<a>",
+      "<link>",
+      "<url>",
+      "<href>"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 4,
+    "question": "What does CSS mainly control?",
+    "options": [
+      "Database data",
+      "Web page style",
+      "Server routes",
+      "Passwords"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "level": 4,
+    "question": "Which famous Bahrain circuit hosts Formula 1 races?",
+    "options": [
+      "Bahrain International Circuit",
+      "Bahrain National Museum",
+      "Khalifa Sports City",
+      "Bahrain Fort"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 5,
+    "question": "How many continents are there?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "level": 5,
+    "question": "What does API stand for?",
+    "options": [
+      "Application Programming Interface",
+      "Advanced Program Internet",
+      "Application Page Input",
+      "Automated Program Index"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 5,
+    "question": "Which React hook is commonly used to store component state?",
+    "options": [
+      "useState",
+      "useRoute",
+      "useServer",
+      "useData"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 5,
+    "question": "What is Bahrain's country code?",
+    "options": [
+      "+973",
+      "+971",
+      "+974",
+      "+965"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 6,
+    "question": "What is the largest ocean on Earth?",
+    "options": [
+      "Atlantic",
+      "Indian",
+      "Arctic",
+      "Pacific"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "level": 6,
+    "question": "Which command is commonly used to create a new React app with Vite?",
+    "options": [
+      "npm create vite@latest",
+      "npm make react",
+      "node create react",
+      "git create react"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 6,
+    "question": "What does HTTP 404 usually mean?",
+    "options": [
+      "Server is ready",
+      "Not Found",
+      "Created",
+      "Unauthorized"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "level": 6,
+    "question": "Which famous causeway connects Bahrain with Saudi Arabia?",
+    "options": [
+      "King Fahd Causeway",
+      "Dubai Causeway",
+      "Bahrain Bridge",
+      "Gulf Causeway"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 7,
+    "question": "What gas do plants absorb from the atmosphere?",
+    "options": [
+      "Oxygen",
+      "Nitrogen",
+      "Carbon Dioxide",
+      "Hydrogen"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "level": 7,
+    "question": "Which library is used to make HTTP requests in many React projects?",
+    "options": [
+      "Axios",
+      "Mongoose",
+      "Express",
+      "Jest"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 7,
+    "question": "What does MongoDB store?",
+    "options": [
+      "Documents",
+      "HTML pages",
+      "CSS files",
+      "Only images"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 7,
+    "question": "What is the capital of Saudi Arabia?",
+    "options": [
+      "Riyadh",
+      "Jeddah",
+      "Dammam",
+      "Mecca"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 8,
+    "question": "Who wrote Romeo and Juliet?",
+    "options": [
+      "Charles Dickens",
+      "William Shakespeare",
+      "Mark Twain",
+      "Jane Austen"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "level": 8,
+    "question": "Which React hook is commonly used for side effects?",
+    "options": [
+      "useEffect",
+      "useClick",
+      "useServer",
+      "useStyle"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 8,
+    "question": "Which tool is commonly used to test API routes in Node/Express projects?",
+    "options": [
+      "Supertest",
+      "Photoshop",
+      "Vite",
+      "Mongoose"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 8,
+    "question": "What is Bahrain's official language?",
+    "options": [
+      "Arabic",
+      "English",
+      "French",
+      "Persian"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 9,
+    "question": "In which year did the Titanic sink?",
+    "options": [
+      "1905",
+      "1912",
+      "1920",
+      "1931"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "level": 9,
+    "question": "What does CRUD stand for?",
+    "options": [
+      "Create Read Update Delete",
+      "Create Run Use Deploy",
+      "Code Read Update Design",
+      "Create React Use Data"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 9,
+    "question": "Which package is commonly used to define MongoDB schemas in a Node.js app?",
+    "options": [
+      "Mongoose",
+      "Axios",
+      "React Router",
+      "Cors"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 9,
+    "question": "Which sea surrounds Bahrain?",
+    "options": [
+      "Arabian Sea",
+      "Persian Gulf",
+      "Red Sea",
+      "Mediterranean Sea"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "level": 10,
+    "question": "What is the chemical symbol for gold?",
+    "options": [
+      "Go",
+      "Gd",
+      "Au",
+      "Ag"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "level": 10,
+    "question": "Which HTTP method is commonly used to create a new resource?",
+    "options": [
+      "GET",
+      "POST",
+      "DELETE",
+      "PATCH"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "level": 10,
+    "question": "What is JSX mainly used for?",
+    "options": [
+      "Writing UI inside JavaScript",
+      "Managing MongoDB",
+      "Styling only",
+      "Creating server databases"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 10,
+    "question": "Which museum in Manama is known as the Bahrain National Museum?",
+    "options": [
+      "Bahrain National Museum",
+      "Pearl Museum of Dubai",
+      "Qal'at Museum",
+      "Gulf Museum"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 11,
+    "question": "Which country hosted the 2016 Summer Olympics?",
+    "options": [
+      "China",
+      "United Kingdom",
+      "Brazil",
+      "Japan"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "level": 11,
+    "question": "What does JSON commonly represent?",
+    "options": [
+      "Data in a text format",
+      "A CSS framework",
+      "A database server",
+      "An image format"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 11,
+    "question": "Which Express method is used to create a GET route?",
+    "options": [
+      "app.get()",
+      "app.fetch()",
+      "app.read()",
+      "app.routeGet()"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 11,
+    "question": "What is the Al Fateh Grand Mosque located in?",
+    "options": [
+      "Manama",
+      "Riffa",
+      "Muharraq",
+      "Sitra"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 12,
+    "question": "Who developed the theory of general relativity?",
+    "options": [
+      "Isaac Newton",
+      "Niels Bohr",
+      "Albert Einstein",
+      "Galileo Galilei"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "level": 12,
+    "question": "What is Git mainly used for?",
+    "options": [
+      "Version control",
+      "Styling websites",
+      "Hosting MongoDB",
+      "Sending emails"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 12,
+    "question": "Which React feature is used to display different UI based on a condition?",
+    "options": [
+      "Conditional rendering",
+      "Mongo rendering",
+      "CSS routing",
+      "Database rendering"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 12,
+    "question": "What is Bahrain's currency abbreviation?",
+    "options": [
+      "BHD",
+      "BRN",
+      "BAH",
+      "BDN"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 13,
+    "question": "What is the smallest prime number?",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "level": 13,
+    "question": "What does JWT commonly help with?",
+    "options": [
+      "Authentication",
+      "CSS styling",
+      "Image editing",
+      "Database backup"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 13,
+    "question": "Which HTTP status code usually means a successful request?",
+    "options": [
+      "200",
+      "404",
+      "500",
+      "301"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 13,
+    "question": "Which city is famous for Bahrain's traditional pearling history and old houses?",
+    "options": [
+      "Muharraq",
+      "Riffa",
+      "Hamad Town",
+      "Zallaq"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 14,
+    "question": "Which planet is closest to the Sun?",
+    "options": [
+      "Venus",
+      "Mercury",
+      "Earth",
+      "Mars"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "level": 14,
+    "question": "What does npm help you manage in a JavaScript project?",
+    "options": [
+      "Packages",
+      "HTML colors",
+      "Computer hardware",
+      "Wi-Fi settings"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 14,
+    "question": "What is a component in React?",
+    "options": [
+      "A reusable UI part",
+      "A database table",
+      "A server cable",
+      "A CSS file only"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 14,
+    "question": "Which Bahrain site is a UNESCO World Heritage Site associated with ancient burial mounds?",
+    "options": [
+      "Dilmun Burial Mounds",
+      "Bahrain Fort",
+      "Al Fateh Mosque",
+      "BIC"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 15,
+    "question": "Which organ pumps blood around the human body?",
+    "options": [
+      "Lung",
+      "Brain",
+      "Heart",
+      "Kidney"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "level": 15,
+    "question": "What does MERN stand for?",
+    "options": [
+      "MongoDB Express React Node.js",
+      "MySQL Express React Next.js",
+      "MongoDB Ember Redux Node",
+      "MariaDB Express React Node"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "level": 15,
+    "question": "Which JavaScript keyword is commonly used to declare a constant?",
+    "options": [
+      "let",
+      "const",
+      "var",
+      "static"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "level": 15,
+    "question": "What is the Bahrain International Circuit mainly known for?",
+    "options": [
+      "Motorsport",
+      "Football",
+      "Swimming",
+      "Tennis"
+    ],
+    "correctAnswer": 0
+  }
+]
