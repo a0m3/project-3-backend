@@ -52,7 +52,7 @@ async function createHistory(req,res){
 
 async function getMyHistory (req,res){
     try{
-        const myHistory = (await GameHistory.find({player: req.user._id})).sort({playedAt: - 1})
+        const myHistory = await GameHistory.find({player: req.user._id}).sort({playedAt: - 1})
         res.status(200).json(myHistory)
     } catch(err) {
         res.status(500).json ({ message:"Internal server error"})
