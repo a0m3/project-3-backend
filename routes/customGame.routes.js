@@ -13,6 +13,6 @@ router.put('/:id', verifyToken, validateQuestions, customGamecontroller.updateCu
 
 router.delete('/:id', verifyToken, customGamecontroller.deleteGame)
 
-router.get('/:id/play', verifyToken, customGamecontroller,playGame)
+router.get('/:id/play', verifyToken, customGamecontroller.playGame)
 
 module.exports = router
