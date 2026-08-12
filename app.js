@@ -8,6 +8,8 @@ const cors = require('cors')
 // Routes Import
 const authRoutes = require('./routes/auth.routes')
 const questionsRoute = require('./routes/questions.routes')
+const customGameRoutes = require('./routes/customGame.routes')
+const historyRoutes = require('./routes/history.routes')
 
 // Middleware
 app.use(
@@ -23,7 +25,8 @@ app.use(morgan('dev'))
 // Routes
 app.use('/auth',authRoutes)
 app.use('/questions', questionsRoute)
-
+app.use('/custom-games', customGamesRoutes)
+app.use('/history',historyRoutes)
 
 
 module.exports = app

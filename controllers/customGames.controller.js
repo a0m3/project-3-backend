@@ -116,7 +116,6 @@ module.exports ={
     getMyCustomGames,
     getGameById,
     createCustomGame,
-    newGame,
     updateCustomGame,
     deleteGame,
     playGame
