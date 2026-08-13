@@ -20,6 +20,12 @@ const customQuestionSchema = new mongoose.Schema({
         required: true,
         min: 0,
         max: 3
+    },
+    level: {
+        type: Number,
+        required: true,
+        min: 1,
+        max: 15
     }
 })
 
@@ -38,12 +44,6 @@ const customGameSchema = new mongoose.Schema({
     questions: {
         type: [customQuestionSchema],
         default: []
-    },
-    level: {
-        type: Number,
-        required: true,
-        min: 1,
-        max: 15
     }
 }, {timestamps:true})
 
